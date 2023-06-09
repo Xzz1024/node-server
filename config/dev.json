@@ -1,0 +1,30 @@
+{
+    "api" : {
+        "jitterbit": {
+            "baseURL": "https://agilent.jitterbit.net/ncosx-dev/V1/",
+
+            "basicAuth": "Basic Rm91bmRhdGlvbnNOb25wcm9kOkVEUFcjJm80NnpMYQ=="
+        },
+        "jitterbit1_1": {
+            "baseURL": "https://api.agilent.com/ncosx-dev/1.1/",
+            "basicAuth": "Basic Rm91bmRhdGlvbnNOb25wcm9kOkVEUFcjJm80NnpMYQ=="
+        }
+    },
+    "upload" : {
+        "dest": "/efs/uploads/registration/",
+        "fieldName": "file"
+    },
+    "email": {
+        "from": "no-reply@dev-19.aws.agilent.com",
+        "enableEcommerceLink": "http://publishing.genomics.agilent.com:8100/MerchConfig/externalUser.jsp",
+        "ecommEnabledCountries": ["TEST", "US", "CA", "MX", "PR", "IE", "GB", "ES", "FR", "IT", "CH", "AT", "NL", "BE", "LU", "DE", "SE", "DK", "FI", "AU", "SG", "IN", "JP", "NZ", "HK", "FO", "SM", "MC", "TH", "MY", "TW", "KR", "BR", "LI", "CN"],
+        "storeLink": "https://drdweb1.drp.agilent.com:4443/store/",
+        "ecommSupportEmailId": "eCommSupport@agilent.com"
+    },
+    "aws": {
+        "region": "us-west-2"
+    },
+    "scim": {
+        "userMappingFile": "/efs/migration/"
+    }
+}
