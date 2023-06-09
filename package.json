@@ -1,0 +1,52 @@
+{
+  "author": "capsion",
+  "name": "node-ts-rollup-template",
+  "version": "0.0.1",
+  "description": "node项目的基础骨架",
+  "main": "build/index.cjs",
+  "module": "build/index.mjs",
+  "types": "docs/index.d.ts",
+  "typings": "docs/index.d.ts",
+  "license": "MIT",
+  "keywords": ["node-ts"],
+  "bin": {
+    "cjs": "bin/app.cjs",
+    "esm": "bin/app.mjs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "scripts": {
+    "build:esm": "tsc --module ESNext",
+    "build:cjs": "tsc --module commonjs",
+    "tsc": "npx tsc",
+    "build": "npx rollup -c rollup.config.ts",
+    "api": "npx api-extractor run --local --diagnostics",
+    "test": "npx rollup -c rollup.config.ts"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "@microsoft/api-extractor": "^7.20.1",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/fs-extra": "^9.0.13",
+    "@types/json5": "^2.2.0",
+    "@types/node": "^16.11.26",
+    "builtins": "^5.0.0",
+    "commitizen": "^4.2.4",
+    "commitlint-config-cz": "^0.13.3",
+    "cz-customizable": "^7.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "fs-extra": "^10.0.1",
+    "rollup": "^2.43.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.3"
+  }
+}
