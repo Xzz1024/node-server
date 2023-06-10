@@ -13,12 +13,12 @@ const router = express.Router();
 // 配置环境变量
 app.set('config', config);
 
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('*',(req, res, next) => {
+app.use('*', (req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Content-type');
+    res.header('Access-Control-Allow-Headers', '*');
     next();
 })
 
@@ -36,12 +36,12 @@ app.use(errorHandler);
 
 //base route
 app.get('/api', (req, res) => {
-    res.status(200).json( 
-        { message: 'Hello! Server is up and running!'}
+    res.status(200).json(
+        { message: 'Hello! Server is up and running!' }
     );
 })
 
-app.listen(config.port, () => { 
+app.listen(config.port, () => {
     console.log(`App running on port ${config.port}`)
-    
+
 })
